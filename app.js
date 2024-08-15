@@ -7,6 +7,6 @@ const app = express();
 const httpserver = http.createServer(app);
 app.post("/webhook/payment",Payment);
 
-httpserver.listen(process.env.PORT, function () {
+httpserver.listen(process.env.PORT||8000, function () {
     console.log(`listening on port ${process.env.PORT}...`);
 });
